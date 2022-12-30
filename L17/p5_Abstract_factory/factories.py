@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-from Topics.OOP.P7_DesignPatterns.C05_Abstract_factory.parsers import HTTPParser, FTPParser
-from Topics.OOP.P7_DesignPatterns.C05_Abstract_factory.ports import HTTPPort, HTTPSecurePort, FTPPort
+from L17.p5_Abstract_factory.parsers import HTTPParser, FTPParser
+from L17.p5_Abstract_factory.ports import HTTPSecurePort, HTTPPort, FTPPort
 
 
 class AbstractFactory(ABC):
