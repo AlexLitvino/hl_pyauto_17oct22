@@ -1,5 +1,5 @@
 import pytest
-
+import time
 
 def add(a, b):
     return a + b
@@ -53,3 +53,13 @@ def test_approx4():
 
 def test_approx5():
     assert pytest.approx([100, 111, 108], abs=10) == [99, 105, 106]
+
+from pytest_check import check
+def test_with_check():
+    print("First")
+    with check:
+        assert 3 == 5, '3 == 5'
+    print("Second")
+    check.equal(4, 5)
+    #assert 4 == 4, '4 == 4'
+    print("Third")

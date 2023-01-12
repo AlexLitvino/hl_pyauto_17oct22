@@ -76,3 +76,12 @@ def create_environment():
 @pytest.fixture(name='short_name')
 def fixture_with_looooooooooooooooooooooooooooong_name():
     print("fixture_with_looooooooooooooooooooooooooooong_name")
+
+
+@pytest.fixture(scope='session')
+def initial_car_data(tmp_path_factory):
+    print(tmp_path_factory.getbasetemp())
+    file_path = tmp_path_factory.mktemp('own_temp', numbered=False) / 'initial_cars_data.txt'
+    with open(file_path, 'w') as f:
+        f.write('QWE1234 Jack\nASD5423 Olga Smith')
+    return file_path

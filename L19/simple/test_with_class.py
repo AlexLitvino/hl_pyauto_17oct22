@@ -6,7 +6,7 @@ from L19.car import Car
 
 import pytest
 
-@pytest.mark.parametrize('number,owner', [(), ()])
+#@pytest.mark.parametrize('number,owner', [(), ()])
 class TestCar:
 
     def setup_class(self):
